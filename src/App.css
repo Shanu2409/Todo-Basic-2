@@ -1,5 +1,7 @@
-.App {
+body {
   text-align: center;
+  background-color: #282c34;
+  color: rgb(229, 229, 229);
 }
 
 .App-logo {
@@ -7,10 +9,79 @@
   pointer-events: none;
 }
 
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: none;
+  background-color: transparent;
+  border-style: inset;
+  color: white;
+  font-size: 20px;
+  background-color: #282c34;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.btn-all {
+  margin-top: 30px;
+}
+
+.del-btn {
+  color: rgba(251, 84, 84, 0.84);
+}
+
+.eachItem>h3 {
+
+  background-color: #7d55cc;
+  padding: 5px 10px;
+  color: #282c34;
+  border-radius: 10px;
+  /* padding: 2px;  */
+  border: #b1a78f 2px double;
+}
+
+input:focus {
+  outline: none;
+}
+
+.main-div {
+  background-color: #1d2025;
+  margin: 10px 300px;
+  padding: 50px;
+  height: 600px;
+  border-radius: 50px;
+}
+
+i {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.eachItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+
+}
+
+.addItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+
 }
 
 .App-header {
@@ -32,6 +103,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
