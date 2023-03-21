@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import Image from "../img/todo.png";
 
+const getLocalItems = () => {
+  let list = localStorage.getItem("list");
+
+  return list ? JSON.parse(localStorage.getItem("list")) : [];
+};
+
 const Todo = () => {
   const [inputData, setInputData] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(getLocalItems());
 
   const addItem = () => {
     if (inputData) {
@@ -24,6 +30,10 @@ const Todo = () => {
   const deleteAllItem = () => {
     setItems([]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(items));
+  }, [items]);
 
   return (
     <>
